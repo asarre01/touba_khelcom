@@ -13,7 +13,7 @@ environment:
 # Configuration du service
 service:
   name: touba-khelcom
-  port: 80
+  port: 5000
   protocol: http
 
 # Configuration du domaine (à personnaliser)
