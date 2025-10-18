@@ -1,0 +1,21 @@
+# Fichiers de développement
+.git
+.gitignore
+README.md
+Dockerfile
+.dockerignore
+
+# Fichiers temporaires
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
+
+# Dossiers de développement
+node_modules
+.vscode
+.idea
+
+# Fichiers de configuration locaux
+.env
+.env.local

@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  touba-khelcom:
+    build: .
+    ports:
+      - "8080:80"
+    container_name: touba-khelcom-app
+    restart: unless-stopped
+    volumes:
+      # Optionnel: pour le développement, vous pouvez monter le code source
+      # - .:/usr/share/nginx/html:ro

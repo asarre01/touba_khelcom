@@ -1,0 +1,38 @@
+# Configuration Coolify pour Touba Khelcom
+version: '1.0'
+
+# Configuration du build
+build:
+  context: .
+  dockerfile: Dockerfile
+
+# Variables d'environnement (optionnelles)
+environment:
+  - NODE_ENV=production
+
+# Configuration du service
+service:
+  name: touba-khelcom
+  port: 80
+  protocol: http
+
+# Configuration du domaine (à personnaliser)
+domain:
+  # Remplacez par votre domaine
+  # - touba-khelcom.votre-domaine.com
+
+# Configuration de la santé du service
+healthcheck:
+  path: /
+  interval: 30s
+  timeout: 10s
+  retries: 3
+
+# Configuration des volumes (si nécessaire)
+volumes:
+  # - ./data:/usr/share/nginx/html/data
+
+# Configuration des labels
+labels:
+  - "coolify.managed=true"
+  - "coolify.service=touba-khelcom"
